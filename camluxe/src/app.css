@@ -1,0 +1,50 @@
+    @import "tailwindcss/base";
+    @import "tailwindcss/components";
+    @import "tailwindcss/utilities";
+    @import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@400;200&family=Quicksand&display=swap');
+    
+
+    :root {
+        /* Fonts */
+        --main-font: 'Taviraj', serif;
+        --sub-font: 'Taviraj', serif;
+        --text-font: 'Quicksand', sans-serif;
+        
+        --main-color: #A39B91;
+        --accent-color: #7E2323;
+        --text-color: #0A090B;
+    }
+    
+    .dark {
+        --main-color: #5c5650;
+        --accent-color: #9e3a3a;
+        --text-color: #f5f5f7;
+    }
+    
+    @layer base {
+        body {
+        @apply bg-white dark:bg-neutral-900 text-text-color dark:text-text-color-dark;
+        font-family: var(--text-font);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+        font-family: var(--main-font);
+        }
+        
+        h2, .subtitle {
+        font-family: var(--sub-font);
+        font-weight: 200;
+        }
+        
+        p, li {
+        font-family: var(--text-font);
+        }
+    }
+
+    @layer components {
+        .page-container {
+            @apply mx-auto px-4
+            max-w-7xl w-full;
+
+        }
+    }
