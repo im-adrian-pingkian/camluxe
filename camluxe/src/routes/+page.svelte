@@ -1,5 +1,193 @@
-<div class="page-container">
-    <!-- Your page content here -->
-    <h1>Welcome to my site</h1>
-    <p>This content will be limited to 1280px width</p>
+<script>
+  import "../app.css";
+  import Navbar from "$lib/components/layouts/Navbar.svelte";
+
+  const galleryImages = [
+    {
+      src: "/images/homepage-1.png",
+      alt: "Camluxe Photography",
+      colSpan: "col-span-3",
+      objectFit: "object-cover",
+    },
+    {
+      src: "/images/homepage-2.png",
+      alt: "Camluxe Photography",
+      colSpan: "col-span-4",
+      objectFit: "object-cover",
+    },
+    {
+      src: "/images/homepage-3.png",
+      alt: "Camluxe Photography",
+      colSpan: "col-span-2",
+      objectFit: "object-cover",
+    },
+  ];
+
+  const carouselImages = [
+    { src: "/images/homepage-4.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-5.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-6.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-7.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-8.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-4.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-5.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-6.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-7.png", alt: "Camluxe Photography" },
+    { src: "/images/homepage-8.png", alt: "Camluxe Photography" },
+  ];
+</script>
+
+<div
+  class="relative bg-[url('/images/background-lines.png')] bg-fixed bg-center bg-no-repeat bg-cover"
+>
+  <Navbar />
+
+  <div class="page-container flex flex-col justify-center relative">
+    <img
+      src="/images/bg-spiral.png"
+      alt="Background Spiral"
+      class="absolute top-8 left-0 z-0"
+    />
+    <div class="flex justify-center">
+      <h1
+        class="relative flex justify-center items-center text-3xl font-extralight w-[437px] h-auto text-center pt-8 z-10"
+      >
+        —The art of capturing moments to create visually stunning and
+        captivating photographs—
+      </h1>
+    </div>
+    <div class="grid grid-cols-9 gap-6 items-end">
+      {#each galleryImages as image}
+        <div class={`${image.colSpan} relative`}>
+          <div class="absolute inset-0 bg-[#766555] opacity-50 z-10"></div>
+          <div class="absolute -right-3 -bottom-3 w-full h-full z-0">
+            <img
+              src={image.src}
+              alt={image.alt}
+              class="w-full h-full opacity-50"
+            />
+          </div>
+          <img
+            src={image.src}
+            alt={image.alt}
+            class={`w-full h-auto ${image.objectFit} relative z-5`}
+          />
+        </div>
+      {/each}
+    </div>
+    <div class="py-8 grid grid-cols-9 gap-4">
+      <div class="col-span-3 flex flex-col justify-center items-center">
+        <button
+          class="bg-[--accent-color] text-white font-paragraph font-medium py-2 px-4 shadow-lg"
+        >
+          CHECK OUR GALLERY
+        </button>
+        <div
+          class="flex justify-center items-center px-4 py-1 bg-[--accent-color]"
+        >
+          <img src="/images/down-arrow.png" alt="Arrow" class="w-5 h-5" />
+        </div>
+      </div>
+      <h3
+        class="pl-12 pr-16 col-span-4 text-xl text-[--text-color] font-paragraph font-normal text-justify"
+      >
+        Explore our curated photography categories, each offering a unique
+        perspective. Lifestyle captures the essence of everyday moments, while
+        Landscape showcases the breathtaking beauty of nature. Portrait
+        highlights the depth of human expressions, and Fashion reveals the
+        elegance and artistry of style. Dive into each category to discover
+        stunning visuals and uncover hidden talents, each telling its own
+        captivating story.
+      </h3>
+    </div>
   </div>
+  <div class="overflow-x-scroll overflow-y-hidden no-scrollbar">
+    <div class="flex">
+      {#each carouselImages as image}
+        <div class="flex-shrink-0 relative">
+          <div class="absolute inset-0 bg-[#766555] opacity-50 z-10"></div>
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="h-auto w-auto object-cover"
+          />
+        </div>
+      {/each}
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <h1
+      class="relative flex justify-center items-center text-2xl font-extralight h-auto text-center pt-4 z-10"
+    >
+      —Chosen by leading brands to transform their vision into captivating
+      visual stories—
+    </h1>
+  </div>
+  <div class="page-container flex justify-center py-10">
+    <div class="grid grid-cols-5 gap-8 items-center">
+      <div class="flex justify-center">
+        <img
+          src="/images/lv.png"
+          alt="Louis Vuitton"
+          class="h-16 opacity-70 hover:opacity-100 transition-opacity"
+        />
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="/images/mango.png"
+          alt="Mango"
+          class="h-18 opacity-70 hover:opacity-100 transition-opacity"
+        />
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="/images/nike.png"
+          alt="Nike"
+          class="h-28 opacity-70 hover:opacity-100 transition-opacity"
+        />
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="/images/oxygn.png"
+          alt="Oxygn"
+          class="h-12 opacity-70 hover:opacity-100 transition-opacity"
+        />
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="/images/adidas.png"
+          alt="Adidas"
+          class="h-12 opacity-70 hover:opacity-100 transition-opacity"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="overflow-x-scroll overflow-y-hidden no-scrollbar">
+    <div class="flex">
+      {#each carouselImages as image}
+        <div class="flex-shrink-0 relative">
+          <div class="absolute inset-0 bg-[#766555] opacity-50 z-10"></div>
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="h-auto w-auto object-cover"
+          />
+        </div>
+      {/each}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Hide scrollbar but keep functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .touch-pan-x {
+    touch-action: pan-x;
+  }
+</style>
