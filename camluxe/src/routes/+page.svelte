@@ -1,6 +1,7 @@
 <script>
   import "../app.css";
   import Navbar from "$lib/components/layouts/Navbar.svelte";
+  import Highlights from "$lib/components/Highlights.svelte";
 
   const galleryImages = [
     {
@@ -126,44 +127,24 @@
   <div class="page-container flex justify-center py-10">
     <div class="grid grid-cols-5 gap-8 items-center">
       <div class="flex justify-center">
-        <img
-          src="/images/lv.png"
-          alt="Louis Vuitton"
-          class="h-16 opacity-70 hover:opacity-100 transition-opacity"
-        />
+        <img src="/images/lv.png" alt="Louis Vuitton" class="h-16" />
       </div>
       <div class="flex justify-center">
-        <img
-          src="/images/mango.png"
-          alt="Mango"
-          class="h-18 opacity-70 hover:opacity-100 transition-opacity"
-        />
+        <img src="/images/mango.png" alt="Mango" class="h-18" />
       </div>
       <div class="flex justify-center">
-        <img
-          src="/images/nike.png"
-          alt="Nike"
-          class="h-28 opacity-70 hover:opacity-100 transition-opacity"
-        />
+        <img src="/images/nike.png" alt="Nike" class="h-28" />
       </div>
       <div class="flex justify-center">
-        <img
-          src="/images/oxygn.png"
-          alt="Oxygn"
-          class="h-12 opacity-70 hover:opacity-100 transition-opacity"
-        />
+        <img src="/images/oxygn.png" alt="Oxygn" class="h-12" />
       </div>
       <div class="flex justify-center">
-        <img
-          src="/images/adidas.png"
-          alt="Adidas"
-          class="h-12 opacity-70 hover:opacity-100 transition-opacity"
-        />
+        <img src="/images/adidas.png" alt="Adidas" class="h-12" />
       </div>
     </div>
   </div>
   <div class="overflow-x-scroll overflow-y-hidden no-scrollbar">
-    <div class="flex">
+    <div class="flex mb-12">
       {#each carouselImages as image}
         <div class="flex-shrink-0 relative">
           <div class="absolute inset-0 bg-[#766555] opacity-50 z-10"></div>
@@ -176,10 +157,40 @@
       {/each}
     </div>
   </div>
+  <div class="page-container">
+    <Highlights />
+  </div>
+  <div class="page-container">
+    <div class="grid grid-cols-7 gap-4 items-center py-12">
+      <div class="col-span-1 flex justify-center">
+        <div
+          class="text-7xl font-main font-semibold"
+          style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);"
+        >
+          LENSMAN
+        </div>
+      </div>
+
+      <div class="col-span-3 relative">
+        <div class="absolute inset-0 bg-[#766555] opacity-50 z-10"></div>
+        <img
+          src="/images/lensman-1.png"
+          alt="Lensman"
+          class="w-full h-auto object-cover relative z-5"
+        />
+      </div>
+
+      <div class="col-span-3 flex items-center">
+        <h2 class="text-[36px] font-main leading-tight">
+          —Explore curated portfolios that ignite creativity and showcase
+          visionary artistry—
+        </h2>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
-  /* Hide scrollbar but keep functionality */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
