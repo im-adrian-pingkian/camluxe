@@ -160,7 +160,10 @@
   <div class="page-container">
     <Highlights />
   </div>
-  <div class="page-container">
+  <div class="page-container relative">
+    <div
+      class="absolute w-screen left-1/2 right-1/2 top-[25%] bottom-1/2 -mx-[50vw] bg-[#766555]/50 h-[209px] -z-10"
+    ></div>
     <div class="grid grid-cols-7 gap-4 items-center py-12">
       <div class="col-span-1 flex justify-center">
         <div
@@ -171,20 +174,70 @@
         </div>
       </div>
 
-      <div class="col-span-3 relative">
-        <div class="absolute inset-0 bg-[#766555] opacity-50 z-10"></div>
-        <img
-          src="/images/lensman-1.png"
-          alt="Lensman"
-          class="w-full h-auto object-cover relative z-5"
-        />
+      <div class="col-span-2 relative flex justify-start">
+        <div class="flex flex-col w-[347px]">
+          <div class="relative w-full">
+            <div class="absolute inset-0 bg-[#766555] opacity-50 z-10"></div>
+            <img
+              src="/images/lensman-1.png"
+              alt="Lensman"
+              class="object-cover relative z-5"
+            />
+
+            <!-- Side button -->
+            <div class="absolute -right-7 top-1/2 flex items-center">
+              <button
+                class="flex justify-center items-center px-1 py-4 bg-[--accent-color]"
+              >
+                <img
+                  src="/images/down-arrow.png"
+                  alt="Arrow"
+                  class="w-5 h-5 -rotate-90"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-start gap-32 w-full">
+            <h3 class="text-xl font-paragraph">Adrian Paul</h3>
+            <div class="flex items-center">
+              <button
+                class="flex justify-center items-center px-4 py-1 bg-[--accent-color]"
+              >
+                <img
+                  src="/images/down-arrow.png"
+                  alt="Arrow"
+                  class="w-5 h-5 opacity-0"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="col-span-3 flex items-center">
+      <div class="col-span-1"></div>
+
+      <div class="col-span-3 flex flex-col items-start justify-between h-full">
         <h2 class="text-[36px] font-main leading-tight">
           —Explore curated portfolios that ignite creativity and showcase
           visionary artistry—
         </h2>
+        <button
+          class="bg-[--accent-color] text-white font-paragraph font-medium py-2 px-4 shadow-lg mb-6"
+        >
+          CHECK OUR GALLERY
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-7 gap-4 items-center py-12">
+      <div class="col-span-1"></div>
+      <div class="col-span-3">
+        <h3 class="text-xl font-paragraph text-justify font-light">
+          Lensman, a place where photographers reveal their masterpieces.
+          Immerse yourself in a handpicked array of breathtaking portfolios,
+          unearth hidden gems, and let the distinctive visions of our showcased
+          photographers ignite your creativity.
+        </h3>
       </div>
     </div>
   </div>
