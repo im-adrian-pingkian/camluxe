@@ -166,12 +166,12 @@
     ></div>
     <div class="grid grid-cols-7 gap-4 items-center py-12">
       <div class="col-span-1 flex justify-center">
-        <div
+        <h1
           class="text-7xl font-main font-semibold"
           style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg);"
         >
           LENSMAN
-        </div>
+        </h1>
       </div>
 
       <div class="col-span-2 relative flex justify-start">
@@ -199,7 +199,7 @@
           </div>
 
           <div class="flex items-center justify-start gap-32 w-full">
-            <h3 class="text-xl font-paragraph">Adrian Paul</h3>
+            <h3 class="text-xl font-paragraph">Riley Bennett</h3>
             <div class="flex items-center">
               <button
                 class="flex justify-center items-center px-4 py-1 bg-[--accent-color]"
@@ -225,7 +225,7 @@
         <button
           class="bg-[--accent-color] text-white font-paragraph font-medium py-2 px-4 shadow-lg mb-6"
         >
-          CHECK OUR GALLERY
+          SEE OTHER LENSMAN
         </button>
       </div>
     </div>
@@ -238,6 +238,146 @@
           unearth hidden gems, and let the distinctive visions of our showcased
           photographers ignite your creativity.
         </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-container relative py-12">
+    <h1
+      class="text-8xl text-[--text-color] font-main font-semibold text-left my-8"
+    >
+      PURPOSE
+    </h1>
+    <div class="grid grid-cols-[75%_25%]">
+      <div class="flex flex-col justify-center">
+        <h2 class="text-[36px] font-main leading-tight mb-8 pr-16">
+          —Unleash your vision, inspire others, and grow together—where every
+          click brings your story to light—
+        </h2>
+
+        <p class="text-xl font-paragraph text-justify font-light max-w-96">
+          The platform is designed specifically for photographers to showcase
+          their unique perspectives. Users can receive valuable feedback from
+          peers, aiding in growth and skill improvement. They can find
+          inspiration through the work and stories of other photographers. The
+          user-friendly interface ensures photos are displayed beautifully and
+          intuitively.
+        </p>
+      </div>
+      <div class="flex w-full relative">
+        <div class="relative">
+          <div
+            class="absolute top-3 left-3 h-full bg-[#766555] opacity-50 z-5 w-screen"
+          ></div>
+          <img
+            src="/images/purpose-1.png"
+            alt="Purpose"
+            class="h-auto w-auto opacity-70 relative z-10 shadow-md"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-container relative py-12">
+    <h1
+      class="text-8xl text-[--text-color] font-main font-semibold text-right my-8"
+    >
+      BLOG
+    </h1>
+
+    <div class="grid grid-cols-[50%_50%] gap-8">
+      <div class="grid grid-cols-2 gap-6">
+        <div class="flex flex-col">
+          <div class="relative">
+            <div
+              class="absolute top-3 left-3 w-44 h-44 bg-[#766555] opacity-50 z-10"
+            ></div>
+            <img
+              src="/images/blog-1.png"
+              alt="Blog Post"
+              class="w-44 h-44 object-cover mb-4 relative z-5"
+            />
+          </div>
+          <h3 class="text-sm font-paragraph font-semibold w-44">
+            Insights for Success: Navigating the World of Business
+          </h3>
+        </div>
+        <div class="flex flex-col">
+          <div class="relative">
+            <div
+              class="absolute top-3 left-3 w-44 h-44 bg-[#766555] opacity-50 z-10"
+            ></div>
+            <img
+              src="/images/blog-2.png"
+              alt="Blog Post"
+              class="w-44 h-44 object-cover mb-4 relative z-5"
+            />
+          </div>
+          <h3 class="text-sm font-paragraph font-semibold w-44">
+            Mastering Growth: Effective Strategies for Upskilling While
+            Balancing a Busy Work Life
+          </h3>
+        </div>
+        <div class="flex flex-col">
+          <div class="relative">
+            <div
+              class="absolute top-3 left-3 w-44 h-44 bg-[#766555] opacity-50 z-10"
+            ></div>
+            <img
+              src="/images/blog-3.png"
+              alt="Blog Post"
+              class="w-44 h-44 object-cover mb-4 relative z-5"
+            />
+          </div>
+          <h3 class="text-sm font-paragraph font-semibold w-44">
+            Living the UX Researcher's Life: Navigating Challenges, Embracing
+            Insights, and Shaping User Experiences
+          </h3>
+        </div>
+        <div class="flex flex-col">
+          <div class="relative">
+            <div
+              class="absolute top-3 left-3 w-44 h-44 bg-[#766555] opacity-50 z-10"
+            ></div>
+            <img
+              src="/images/blog-4.png"
+              alt="Blog Post"
+              class="w-44 h-44 object-cover mb-4 relative z-5"
+            />
+          </div>
+          <h3 class="text-sm font-paragraph font-semibold w-44">
+            How Can Team Brainstorming Spark Ideas and Turn Them into Action
+          </h3>
+        </div>
+      </div>
+
+      <!-- Right column - Blog info -->
+      <div class="flex flex-col justify-between">
+        <div class="flex flex-col items-center justify-evenly h-full">
+          <p
+            class="w-full text-xl font-paragraph text-justify font-light max-w-96"
+          >
+            Explore our curated collection of business blogs, where you'll find
+            insights, strategies, and tips to navigate and succeed in the
+            dynamic world of business. Dive in to stay informed and inspired!
+          </p>
+
+          <button
+            class="bg-[--accent-color] text-white font-paragraph font-medium py-2 px-4 shadow-lg mb-4 w-fit"
+          >
+            CHECK OUR BLOG
+          </button>
+
+          <button
+            class="bg-[--accent-color] text-white font-paragraph font-medium py-2 px-4 shadow-lg mb-4 w-fit"
+          >
+            REACH US THROUGH
+          </button>
+        </div>
+        <div class="w-full p-4 bg-[#766555]/50">
+          <p class="text-5xl text-center font-main">today@cameragenic.com</p>
+        </div>
       </div>
     </div>
   </div>
